@@ -78,9 +78,6 @@ function keyPressed (e) {
     
 }
 
-function mouseClicked () {
-     reDraw();
-}
 
 // 更换所有随机种子，绘制新图形
 function reDraw() {
