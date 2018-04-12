@@ -85,7 +85,7 @@ function reDraw() {
     randomSeed(random(415));
     noiseSeed(random(415));
     clear();
-    background(random(50),random(32),random(16));
+    background(random(30,90),random(60,120),random(90,136));
     
 	for(var i = 0; i < nums; i++) {
 		particles_a[i] = new Particle(random(0, width),random(0,height/3),view_mode);
@@ -101,7 +101,7 @@ function reDraw() {
 
 
 function colorSet() {
-    mode = int(random(1,3));
+    mode = int(random(1,5));
     if (mode = 1) {
          R = map(random(1),0,1,0,255);
          G = map(random(1),0,1,64,255);
@@ -111,6 +111,11 @@ function colorSet() {
         R = 3*base;
         G = 2*base;
         B = base;
+    } else if (mode = 3) {
+        base = int(random(128));
+        R = 1.5*base;
+        G = 0.5*base;
+        B = base;
     } else {
         base = int(random(32));
         R = 3*base;
@@ -118,7 +123,7 @@ function colorSet() {
         B = base;
     }
     
-    alpha = int(random(24,36));
+    alpha = int(random(21,30));
     
 }
 
