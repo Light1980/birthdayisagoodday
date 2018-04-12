@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="addons/p5.dom.min.js"></script>
+    <script src="sketch2.js"></script>
+    <title>Happy weird Birthday</title>
+    <meta charset="utf-8">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script> 
+      
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+      
+    <script>
+        var show = function() {
+        document.getElementById("instruction").style.display = "block";
+        }
+        
+        var hide = function() {
+        document.getElementById("instruction").style.display = "none";
+        
+        }
+
+    </script>
+    <style>
+        .fa-angle-up {
+            position: absolute;
+            bottom:0; 
+            right:0;
+            color: white;
+            font-size:2em;
+            
+        }
+        
+        .fa-angle-down {
+            position: absolute;
+            top:0.5em; 
+            right:0;
+            color: white;
+            font-size:2em;
+        }
+        
+        #instruction {
+            display: none;
+            position: absolute;
+            width:200px;
+            height:500px;
+            
+            bottom: 0;
+            right: 0;
+            color: lightyellow;
+            font-family: monospace;
+            background-color: rgba(40, 20, 30,5);
+            border-top-left-radius:2em;
+        }
+        
+        #instruction p {
+            font-family: 'Gaegu', cursive;
+            padding-left: 10px; 
+            
+        }
+        
+        br {
+            height:0.1em;
+        }
+    </style>  
+  </head>
+  <body>    
+      <a onclick = "show()"><i class="fas fa-angle-up" ></i></a>
+      <div id = 'instruction'>
+          <p>Life is wired</p>
+          <p ><b>BUT I DO HOPE YOU CAN ENJOY THIS JOURNEY.</b></p>
+          <br>
+          <p>Press <span style = "color:white">"R"</span> to start a new endeavor.</p>
+          <p>Press <span style = "color:white">"P"</span> to pause.
+          <p>Press <span style = "color:white">"S"</span> to save whatever scene you like.</p>
+          <p>Press <span style = "color:white">"V"</span> to change the view mode from FLOW to STAR_DUST.</p>
+          <br>
+          <p>A variant implemention of Yasai's <a href="https://www.openprocessing.org/sketch/494102">PERLIN NOISE</a>.</p>
+          <p>In order to celebrate <span style = "color:white">"SHD's birdthday"</span></p>
+          <a onclick = "hide()"><i class="fas fa-angle-down"></i></a>
+      </div>
+  </body>
+</html>
