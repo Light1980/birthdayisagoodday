@@ -15,10 +15,12 @@
     <script>
         var show = function() {
         document.getElementById("instruction").style.display = "block";
+		document.getElementById("up-arrow").style.display = "none";
         }
         
         var hide = function() {
         document.getElementById("instruction").style.display = "none";
+		document.getElementById("up-arrow").style.display = "block";
         
         }
 
@@ -26,35 +28,48 @@
     <style>
         .fa-angle-up {
             position: absolute;
-            bottom:0; 
-            right:0;
-            color: white;
-            font-size:2em;
+            bottom:5%; 
+            right:50%;
+            color: lightyellow;
+            font-size:4em;
+			opacity: 0.4;
             
         }
         
         .fa-angle-down {
             position: absolute;
-            top:0.5em; 
-            right:0;
+            bottom:0; 
+            right:5%;
             color: white;
-            font-size:2em;
+            font-size:3em;
+			opacity: 0.5;
         }
         
         #instruction {
             display: none;
             position: absolute;
-            width:200px;
-            height:500px;
+            width:500px;
+            height:400px;
             
-            bottom: 0;
-            right: 0;
+            left:0; right:0; bottom:0;
+
+
+			margin:auto;
             color: lightyellow;
-            font-family: monospace;
+            font-family: 'Gaegu', monospace;
             background-color: rgba(40, 20, 30,5);
             border-top-left-radius:2em;
+			border-top-right-radius:2em;
+			
+			opacity:0.7;
         }
         
+		#instruction h2 {
+            font-family: 'Gaegu', cursive;
+            padding-left: 10px; 
+            
+        }
+		
         #instruction p {
             font-family: 'Gaegu', cursive;
             padding-left: 10px; 
@@ -67,9 +82,9 @@
     </style>  
   </head>
   <body>    
-      <a onclick = "show()"><i class="fas fa-angle-up" ></i></a>
+      <a onclick = "show()"><i class="fas fa-angle-up" id = "up-arrow"></i></a>
       <div id = 'instruction'>
-          <p>Life is weird</p>
+          <h2>Life is weird</h2>
           <p ><b>BUT I DO HOPE YOU CAN ENJOY THIS JOURNEY.</b></p>
           <br>
           <p>Press <span style = "color:white">"R"</span> to start a new endeavor.</p>
